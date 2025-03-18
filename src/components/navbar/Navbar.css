@@ -1,0 +1,194 @@
+/* General Navbar */
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-color: #0a192f;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding-right: 40px;
+}
+
+.nav-item span {
+  color: #63fcd7;
+  padding-right: 7px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.nav-item a:hover {
+  color: #63fcd7;
+}
+
+.nav-item button{
+  margin-top: -10px;
+  margin-left: 5px;
+  color: #63fcd7;
+  background-color:  #0a192f;
+  border-color: #63fcd7;
+  font-size: 15px;
+  padding: 10px 9px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-item button:hover{
+  transform: translate(-5px, -5px); 
+  box-shadow: 5px 5px #42a99a; 
+}
+
+.logo img { 
+  width: 80px; 
+  height: auto; 
+  display: block; 
+}
+
+.logo {
+  position: relative;
+  z-index: 10;
+  margin: 0;
+  padding: 5px;
+  display: flex;
+  align-items: center; 
+  height: 50px;
+}
+
+/* Mobile Navbar */
+.navBarContainer {
+  height: 60px; 
+  padding: 0 20px; 
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #63fcd7;
+  padding: 10px 20px;
+}
+
+.menu-icon {
+  cursor: pointer;  
+}
+
+/* Popup Menu */
+.popupContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100% ;
+  background-color:  #0a192f;;
+}
+
+.dialogStyle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #0a192f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+.boxStyle {
+  background-color:  #0a192f;
+  padding: 2px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.popupHeader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.content {
+  font-size: 0.7rem;
+  padding-bottom: 5px;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
+
+.verticalNav {
+  overflow: hidden;
+  background-color:  #0a192f;
+}
+
+.verticalNav a {
+  display: flex;
+  flex-direction: column;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.verticalNav a:hover {
+  background-color: #63fcd7;
+  color: #0a192f;
+}
+
+
+@keyframes myAnimNav {
+  0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	}
+
+/* Responsive Design */
+@media (max-width: 750px) {
+  .nav-container {
+    display: none;
+  }
+
+  .navBarContainer {
+    display: flex;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
