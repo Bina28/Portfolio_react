@@ -1,101 +1,142 @@
-
-
 .about-container {
-    display: flex;
-   flex-wrap: wrap;
-    min-height: 100vh;
-    color: white;
-    justify-content:center;
-    align-items: flex-start;
-    gap: 70px;
-    color: #CCD6F6;
-  
-    padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 70px;
+  padding-left: 200px;
+  margin-bottom: 50px;
+  min-height: 90vh;
 }
 
-.title {
-    padding-bottom: 10px;
-    align-self: flex-start; /* Ensures "About Me" stays aligned with text */
-   color: white;
+.about-title {
+  padding-bottom: 15px;
+  align-self: flex-start;
+  color: #ccd6f6;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.about-title span {
+  color: #64ffda;
+  font-weight: 400;
+  font-family: "Source Code Pro", monospace;
+  font-size: 24px;
 }
 
 .about-text {
-    max-width: 40%;
-    font-size: 16px;
-     line-height: 1.5;
-     flex:1;
-     color: #A8B2D1;
-     
+  max-width: 50%;
+  font-size: 16px;
+  line-height: 1.5;
+  flex: 1;
+  color: #a8b2d1;
+}
+
+.skill-title {
+  padding-bottom: 10px;
+}
+
+.skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 14px;
+  color: #8892b0;
+}
+
+.skill-point {
+  flex: 0 0 30%; /* Each item will take 30% of the container width */
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.skill-point::before {
+  content: "▸";
+  color: #64ffda;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .about-img {
-    position: relative;
-    display: inline-block;
-    margin-top: 50px;
+  position: relative;
+  display: inline-block;
+  margin-top: 10%;
 }
 
 .about-img::before {
-    content: "";
-    position: absolute;
-    top: 8px; 
-    left: 8px;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border-radius: 10px;
-    border: 2px solid #64ffda;;
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid #64ffda;
+
 }
 
 .about-img img {
-    width: 350px;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    position: relative;
-    z-index: 1;
-    filter: grayscale(30%) contrast(1.0) brightness(0.8) sepia(1) hue-rotate(100deg) saturate(1);
-    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+  width: 280px;
+  height: auto;
+  display: block;
 
+  border-radius: 10px;
+
+
+  filter: grayscale(30%) contrast(1) brightness(0.8) sepia(1) hue-rotate(100deg)
+    saturate(1);
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .about-img:hover img {
-    filter: none;
-    transform: translate(-5px, -5px);
+  filter: none;
+  transform: translate(-5px, -5px);
 }
 
-
-.title span {
-    color: #64ffda;
-}
 @media (max-width: 768px) {
-    .about-container {
-      flex-direction: column; /* Stabler elementene vertikalt */
-      align-items: center; /* Sentrerer innholdet */
-      text-align: center; /* Sentrerer teksten */
-      gap: 20px; /* Reduserer avstanden */
-    }
-  
-    .about-text {
-      max-width: 90%; /* Teksten tar mer plass */
-      text-align: left; /* Justerer teksten til venstre */
-    }
-  
-    .about-img {
-      margin-top: 20px; /* Flytter bildet litt ned */
-    }
+  .about-container {
+    flex-direction: column; /* Stabler elementene vertikalt */
+    align-items: center; /* Sentrerer innholdet */
+    text-align: center; /* Sentrerer teksten */
+    padding-left: 50px;
+    gap: 20px; /* Reduserer avstanden */
   }
-  
-  @media (max-width: 480px) {
 
-    
-    .about-text {
-      max-width: 100%; /* Teksten tar hele bredden */
-      padding: 0 20px; /* Legger til litt padding på sidene for bedre lesbarhet */
-    }
-  
-    .about-img img {
-      width: 50%; /* Gjør bildet responsivt */
-      max-width: 200px; /* Hindrer at det blir for stort */
-    }
+  .about-text {
+    max-width: 90%; /* Teksten tar mer plass */
+    text-align: left; /* Justerer teksten til venstre */
   }
+
+  .about-img {
+    margin-top: 20px; /* Flytter bildet litt ned */
+    z-index: 1; 
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding-left: 20px;
+  }
+
+  .about-text {
+    max-width: 100%; /* Teksten tar hele bredden */
+    padding: 0 20px; /* Legger til litt padding på sidene for bedre lesbarhet */
+  }
+
+  .about-img img {
+    width: 50%; /* Gjør bildet responsivt */
+    max-width: 200px; /* Hindrer at det blir for stort */
+    z-index: 1; 
+  }
+}

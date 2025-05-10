@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from '../../assets/logo.png';
 import { useCallback } from "react";
+import { List } from "phosphor-react";
+import {X} from "phosphor-react";
 
 
 function Navbar(): JSX.Element {
@@ -36,10 +38,9 @@ function Navbar(): JSX.Element {
     <img src={logo} alt="Logo" />
   </a>
           <ul className="nav-list">
-            <li className="nav-item"><a href="#about"><span>01.</span> About</a></li>
-            <li className="nav-item"><a href="#projects"><span>02.</span> Projects</a></li>
-            <li className="nav-item"><a href="#work"><span>03.</span> Work</a></li>
-            <li className="nav-item"><a href="#contact"><span>04.</span> Contact</a></li>
+            <li className="nav-item"><a href="#about"><span>01.</span>About</a></li>
+            <li className="nav-item"><a href="#projects"><span>02.</span>Projects</a></li>
+                  <li className="nav-item"><a href="#contact"><span>03.</span>Contact</a></li>
             <li className="nav-item"><button onClick={handleDownload}>Resume</button></li>
           </ul>
         </nav>
@@ -52,7 +53,7 @@ function Navbar(): JSX.Element {
     <img src={logo} alt="Logo" />
   </a>
           <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
-            <MenuIcon style={{ fontSize: "200%", cursor: "pointer" }} />
+          <List size={32}  />
           </div>
 
           {/* Mobile Menu Popup */}
@@ -63,15 +64,14 @@ function Navbar(): JSX.Element {
                 <div className="mainContent">
                 <div className="popupHeader">
                   <button className="closeButton" onClick={() => setMenuOpen(false)}>
-                    <MenuIcon style={{ fontSize: "250%", color: "white" }} />
+                    <X size={32}  />
                   </button>
                   </div>
                   </div>
                   <div className="verticalNav">
                     <a href="#">Home</a>
                     <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#work">Work</a>
+                    <a href="#projects">Projects</a>                    
                     <a href="#contact">Contact</a>
                   </div>
                 </div>
