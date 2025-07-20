@@ -1,20 +1,22 @@
-.projects-container {
-  max-width: 1000px;
+#projects {
+  padding: 10rem 0;
+  margin: 0 auto;
+  max-width: 100rem;
+}
+
+.projects-section {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 0 20px;
-  gap: 50px;
+  gap: 5rem;
   color: #a8b2d1;
-  margin-bottom: 50px;
-  min-height: 90vh;
 }
 
 .project-title {
-  padding-bottom: 30px;
+  padding-bottom: 3rem;
   color: #ccd6f6;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 3rem;
   text-align: center;
 }
 
@@ -22,16 +24,16 @@
   color: #64ffda;
   font-weight: 400;
   font-family: "Source Code Pro", monospace;
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 .project {
   display: flex;
   flex-direction: column;
   background-color: #112240;
-  padding: 32px;
-  border-radius: 15px;
-  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1);
+  padding: 3.2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.1);
 }
 
 .project:hover {
@@ -41,7 +43,7 @@
 .project-content {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1.5rem;
   flex-grow: 1;
   width: 100%;
 }
@@ -69,9 +71,9 @@
 
 .project-name {
   color: #ccd6f6;
-  padding-top: 20px;
+  padding-top: 2.4rem;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 .project-name:hover {
@@ -80,7 +82,7 @@
 
 .project-description {
   color: #a8b2d1;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.5;
 }
 
@@ -88,28 +90,62 @@
   margin-top: auto;
   display: flex;
   justify-content: flex-start;
-  gap: 10px;
-  font-size: 12px;
-  padding-top: 15px;
-  letter-spacing: 0.5px;
+  gap: 1rem;
+  font-size: 1.2rem;
+  padding-top: 1.6rem;
+  letter-spacing: 0.05rem;
   color: #8892b0;
   font-weight: 300;
 }
 
-/* Endret media query for å beholde grid */
-@media (max-width: 768px) {
-  .projects-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 10px; /* Justerer grid-innstillingene */
+/****************************/
+/* BELOW 1200px (Landscape tablets) */
+/****************************/
+
+@media (max-width: 75em) {
+  #projects {
+    padding: 4.8rem 0;
+  }
+
+  .projects-section {
+    gap: 4rem;
   }
 }
 
-@media (max-width: 480px) {
-  .projects-container {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(130px, 1fr)
-    ); /* Endrer min-bredden på kortene */
-    padding: 10px;
+/****************************/
+/* BELOW 944px (Tablets) */
+/****************************/
+@media (max-width: 59em) {
+  #projects {
+    max-width: 94rem;
+    padding-inline: 1.6rem;
+  }
+  .projects-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/****************************/
+/* BELOW 760px (Smaller tablets) */
+/****************************/
+@media (max-width: 47.5em) {
+  .project-description {
+    line-height: 1.6;
+  }
+
+  #projects {
+    padding: 4rem;
+  }
+}
+
+/****************************/
+/* BELOW 514px (Phones) */
+/****************************/
+@media (max-width: 32em) {
+  .projects-section {
+    grid-template-columns: 1fr;
+    max-width: 60rem;
+    row-gap: 3rem;
+    padding: 3rem;
   }
 }
