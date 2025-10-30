@@ -1,7 +1,7 @@
-import React, { JSX } from "react";
 import "./Hero.css";
 
-function Hero(): JSX.Element {
+export default function Hero() 
+ {
   return (
     <section id="hero" className="hero-section">
       <p className="hero-intro highlight">Hi, my name is</p>
@@ -16,4 +16,4 @@ function Hero(): JSX.Element {
   );
 }
 
-export default Hero;
+

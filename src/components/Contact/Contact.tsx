@@ -1,7 +1,6 @@
 import "./Contact.css";
-import { JSX } from "react";
 
-function Contact(): JSX.Element {
+export default function Contact() {
   return (
     <section id="contact" className="contact-section">
       <h1 className="first-header first-header--center">
@@ -41,5 +40,3 @@ function Contact(): JSX.Element {
     </section>
   );
 }
-
-export default Contact;

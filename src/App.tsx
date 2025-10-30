@@ -5,7 +5,8 @@ import Home from "./components/hero/Hero";
 import AboutMe from "./components/about-me/AboutMe";
 import Projects from "./components/projects/Projects";
 import Footer from "./components/footer/Footer";
-import Contact from  "./components/Contact/Contact";
+import Contact from  "./components/contact/Contact";
+import { projects } from "./components/projects/ProjectList";
 
 function App(): JSX.Element {
   return (
@@ -13,7 +14,7 @@ function App(): JSX.Element {
       <Navbar />
       <Home />
       <AboutMe />
-      <Projects />    
+      <Projects projects={projects} />    
       <Contact />
       <Footer />
     </div>
