@@ -1,8 +1,7 @@
 import "./AboutMe.css";
 import myPicture from "../../assets/my-picture.webp";
-import { JSX } from "react";
 
-function AboutMe(): JSX.Element {
+export default function AboutMe() {
   return (
     <section id="about">
       <h1 className="first-header">
@@ -59,5 +58,3 @@ function AboutMe(): JSX.Element {
     </section>
   );
 }
-
-export default AboutMe;

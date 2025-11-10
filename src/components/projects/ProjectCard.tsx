@@ -1,18 +1,18 @@
 import { JSX } from "react";
-import { Project } from "./Projects";
+import { projects } from "./ProjectList";
 import { FolderSimple } from "phosphor-react";
+import { Project } from "../..";
 
-function ProjectCard({
-  name,
-  description,
-  technologies,
-  githubLink,
-}: Project): JSX.Element {
+type Props = {
+  project: Project;
+};
+
+export default function ProjectCard({ project }: Props) {
   return (
     <div className="project">
       <div className="project-icons">
         <FolderSimple size={32} className="folder-icon" />
-        <a href={githubLink} target="_blank" rel="noopener noreferrer">
+        <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="28"
@@ -25,10 +25,10 @@ function ProjectCard({
         </a>
       </div>
       <div className="project-content">
-        <h3 className="project-name">{name}</h3>
-        <p className="project-description">{description}</p>
+        <h3 className="project-name">{project.name}</h3>
+        <p className="project-description">{project.description}</p>
         <div className="technologies">
-          {technologies.map((tech, index) => (
+          {project.technologies.map((tech, index) => (
             <span key={index} className="tech-badge">
               {tech}
             </span>
@@ -38,5 +38,3 @@ function ProjectCard({
     </div>
   );
 }
-
-export default ProjectCard;

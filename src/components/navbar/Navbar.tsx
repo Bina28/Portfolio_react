@@ -20,8 +20,8 @@ function Navbar(): JSX.Element {
 
   const handleDownload = useCallback((): void => {
     const link = document.createElement("a");
-    link.href = "/AlbinaDiakovaCV.pdf";
-    link.setAttribute("download", "My_Resume.pdf");
+    link.href = "/CV_AlbinaDiakova.pdf";
+    link.setAttribute("download", "CV_AlbinaDiakova.pdf");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

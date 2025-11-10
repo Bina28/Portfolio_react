@@ -6,6 +6,10 @@ import AboutMe from "./components/about-me/AboutMe";
 import Projects from "./components/projects/Projects";
 import Footer from "./components/footer/Footer";
 import Contact from  "./components/contact/Contact";
+<<<<<<< HEAD
+=======
+import { projects } from "./components/projects/ProjectList";
+>>>>>>> 5683c8a211fef5e072fcc8d5fc977fd35882276d
 
 function App(): JSX.Element {
   return (
@@ -13,7 +17,7 @@ function App(): JSX.Element {
       <Navbar />
       <Home />
       <AboutMe />
-      <Projects />    
+      <Projects projects={projects} />    
       <Contact />
       <Footer />
     </div>
